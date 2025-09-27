@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ho.ko AI.nalytics - Inteligência Preditiva para Gestão de Marca',
+  title: 'ho.ko AI.nalytics',
   description: 'A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação. Decisões mais inteligentes, marcas mais fortes.',
   keywords: 'inteligência preditiva, gestão de marca, analytics, comunicação, marketing, brand health',
   authors: [{ name: 'ho.ko AI.nalytics' }],
