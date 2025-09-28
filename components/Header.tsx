@@ -20,6 +20,7 @@ const navigation = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -48,6 +49,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    fetch('/api/auth-status', { credentials: 'include' })
+      .then(res => res.json())
+      .then((data) => setIsLoggedIn(!!(data?.success && data?.user)))
+      .catch(() => setIsLoggedIn(false));
+  }, []);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -63,7 +71,7 @@ export default function Header() {
         className="progress-bar"
         style={{ scaleX }}
       />
-      
+
       <header className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b">
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
@@ -73,16 +81,15 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-4">
               {navigation.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-sm font-medium transition-colors hover:text-primary focus-ring rounded-md px-2 py-1 ${
-                    activeSection === item.href.slice(1)
-                      ? 'text-primary'
-                      : 'text-muted-foreground'
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-primary focus-ring rounded-md px-2 py-1 ${activeSection === item.href.slice(1)
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
+                    }`}
                 >
                   {item.name}
                 </button>
@@ -91,8 +98,12 @@ export default function Header() {
 
             {/* CTAs */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button variant="ghost" size="sm" className="magnetic">
-                Experimente agora
+              <Button
+                variant="ghost"
+                className="w-full justify-start"
+                onClick={() => { window.location.href = isLoggedIn ? '/dashboardPage.html' : '/login.html'; }}
+              >
+                {isLoggedIn ? 'Acessar' : 'Experimente agora'}
               </Button>
               <Dialog>
                 <DialogTrigger asChild>
@@ -127,18 +138,21 @@ export default function Header() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors w-full text-left focus-ring rounded-md ${
-                    activeSection === item.href.slice(1)
+                  className={`block px-3 py-2 text-base font-medium transition-colors w-full text-left focus-ring rounded-md ${activeSection === item.href.slice(1)
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-primary'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </button>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start">
-                  Experimente agora
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start"
+                  onClick={() => { window.location.href = isLoggedIn ? '/dashboardPage.html' : '/login.html'; }}
+                >
+                  {isLoggedIn ? 'Acessar' : 'Experimente agora'}
                 </Button>
                 <Dialog>
                   <DialogTrigger asChild>
