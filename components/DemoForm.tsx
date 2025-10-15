@@ -111,11 +111,11 @@ export default function DemoForm() {
           <span>Solicitar Demonstração</span>
         </DialogTitle>
         <DialogDescription>
-          Preencha os dados abaixo e nossa equipe entrará em contato para agendar uma demonstração personalizada da plataforma.
+          Preencha os dados abaixo e nossa equipe entrará em contato.
         </DialogDescription>
       </DialogHeader>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 mt-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 mt-2 text-sm">
         <div className="grid grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name">Nome completo *</Label>
@@ -224,7 +224,7 @@ export default function DemoForm() {
           )}
         </div>
 
-        <div className="bg-muted/50 rounded-lg p-4">
+        {/*<div className="bg-muted/50 rounded-lg p-4">
           <div className="flex items-start space-x-3">
             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
             <div className="text-sm">
@@ -237,7 +237,7 @@ export default function DemoForm() {
               </ul>
             </div>
           </div>
-        </div>
+        </div>*/}
 
         <Button
           type="submit"
@@ -257,10 +257,9 @@ export default function DemoForm() {
 
         <p className="text-xs text-muted-foreground text-center">
           Ao enviar, você concorda com nossa{' '}
-          <button type="button" className="underline hover:text-primary">
+          <button type="button" className="underline hover:text-primary" onClick={() => window.location.href = "https://www.hokoainalytics.com.br/privacyPolicyPage.html"}>
             Política de Privacidade
           </button>
-          . Respeitamos sua privacidade e não fazemos spam.
         </p>
       </form>
     </div>

@@ -86,7 +86,7 @@ export default function Footer() {
                   <div className="w-8 h-8 bg-hoko-primary/30 rounded-lg flex items-center justify-center">
                     <Mail className="h-4 w-4 text-hoko-primary" />
                   </div>
-                  <span className="text-slate-300">contato@hoko-analytics.com</span>
+                  <span className="text-slate-300">marketing@hokocomunicacao.com.br</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-hoko-primary/30 rounded-lg flex items-center justify-center">
@@ -142,14 +142,11 @@ export default function Footer() {
             >
               <span>&copy; 2025 ho.ko AI.nalytics. Todos os direitos reservados.</span>
               <div className="flex space-x-6">
-                <button className="hover:text-white transition-colors focus-ring rounded">
+                <button className="hover:text-white transition-colors focus-ring rounded" onClick={() => window.location.href = "https://www.hokoainalytics.com.br/termsUse.html"}>
                   Termos de Uso
                 </button>
-                <button className="hover:text-white transition-colors focus-ring rounded">
+                <button className="hover:text-white transition-colors focus-ring rounded" onClick={() => window.location.href = "https://www.hokoainalytics.com.br/privacyPolicyPage.html"}>
                   Política de Privacidade
-                </button>
-                <button className="hover:text-white transition-colors focus-ring rounded">
-                  LGPD
                 </button>
               </div>
             </motion.div>
