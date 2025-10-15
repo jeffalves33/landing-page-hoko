@@ -10,13 +10,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'ho.ko AI.nalytics',
-  description: 'A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação. Decisões mais inteligentes, marcas mais fortes.',
+  description: 'Plataforma de inteligência de marca e comunicação, que conecta performance, percepção e valor  para decisões mais rápidas, embasadas e estratégicas.',
   keywords: 'inteligência preditiva, gestão de marca, analytics, comunicação, marketing, brand health',
   authors: [{ name: 'ho.ko AI.nalytics' }],
   creator: 'ho.ko AI.nalytics',
   openGraph: {
     title: 'ho.ko AI.nalytics - Inteligência Preditiva para Gestão de Marca',
-    description: 'A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação.',
+    description: 'Plataforma de inteligência de marca e comunicação, que conecta performance, percepção e valor  para decisões mais rápidas, embasadas e estratégicas.',
     url: 'https://hoko-analytics.com',
     siteName: 'ho.ko AI.nalytics',
     locale: 'pt_BR',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ho.ko AI.nalytics - Inteligência Preditiva para Gestão de Marca',
-    description: 'A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação.',
+    description: 'Plataforma de inteligência de marca e comunicação, que conecta performance, percepção e valor  para decisões mais rápidas, embasadas e estratégicas.',
   },
   robots: {
     index: true,

@@ -32,12 +32,10 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <ValueProposition />
         <LazyFeatures />
-        <LazyPricing />
-        <LazySocialProof />
-        <LazyComparison />
         <FinalCTA />
+        <LazyPricing />
+        <LazyComparison />
       </main>
       <Footer />
     </div>

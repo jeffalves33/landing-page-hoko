@@ -2,35 +2,35 @@
 
 import { motion } from 'framer-motion';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Heart, TrendingUp, Target, FileText, Info } from 'lucide-react';
+import { FileText, Info, Sparkles, Crosshair, ChartSpline } from 'lucide-react';
 
 const features = [
   {
-    icon: Heart,
-    title: 'Brand Health Track',
-    description: 'Monitore reconhecimento, percepção e reputação em tempo real.',
-    example: 'Track de 15+ métricas incluindo share of voice, sentiment e recall espontâneo',
+    icon: Sparkles,
+    title: 'Clareza Estratégica',
+    description: 'Decisões mais seguras e focadas no valor.',
+    example: 'Simplifica o excesso de dados e destaca o que realmente importa',
     color: 'hoko-primary',
   },
   {
-    icon: TrendingUp,
-    title: 'Predições de Marketing',
-    description: 'Antecipe resultados e direcione investimentos com segurança.',
-    example: 'Predição de CPL, CAC e LTV com 95% de precisão para os próximos 90 dias',
+    icon: Crosshair,
+    title: 'Centralização Inteligente',
+    description: 'Reduz tempo operacional e aumenta eficiência.',
+    example: 'Reúne marketing, reputação e vendas em um só ambiente',
     color: 'hoko-secondary',
   },
   {
-    icon: Target,
-    title: 'Gestão de Objetivos de Marca',
-    description: 'Conecte dados a awareness, educação e leads.',
-    example: 'Dashboard executivo com KPIs personalizados e alertas automáticos',
+    icon: FileText,
+    title: 'Relatórios',
+    description: 'Ganhe eficiência em períodos de entregas de resultados para clientes.',
+    example: 'Comunicação periódica efetica sobre resultados',
     color: 'hoko-tertiary',
   },
   {
-    icon: FileText,
-    title: 'Relatórios Automatizados',
-    description: 'Claros para diretoria e investidores.',
-    example: 'Relatórios white-label personalizados, enviados automaticamente',
+    icon: ChartSpline,
+    title: 'Análises',
+    description: 'Entendimento real do presente e da performance.',
+    example: 'O que aconteceu, antecipar oportunidades e indicação do que fazer',
     color: 'hoko-primary',
   },
 ];
@@ -77,7 +77,7 @@ export default function Features() {
                 <div className="relative dark-block p-8 h-full hover:shadow-brand transition-all duration-500 border gradient-border">
                   {/* Animated border on hover */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-hoko-primary via-hoko-secondary to-hoko-tertiary opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm" />
-                  
+
                   <div className="relative z-10">
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-${feature.color}/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className={`h-7 w-7 text-${feature.color}`} />
@@ -87,7 +87,7 @@ export default function Features() {
                       <h3 className="text-xl font-semibold text-foreground group-hover:text-hoko-primary transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      
+
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
@@ -133,16 +133,16 @@ export default function Features() {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-hoko-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Fontes de dados integradas</div>
+              <div className="text-3xl font-bold text-hoko-primary mb-2">5+</div>
+              <div className="text-sm text-muted-foreground">Plataformas integradas</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-hoko-secondary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Monitoramento em tempo real</div>
+              <div className="text-sm text-muted-foreground">Monitoramento</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-hoko-tertiary mb-2">API</div>
-              <div className="text-sm text-muted-foreground">Integração completa</div>
+              <div className="text-sm text-muted-foreground">Integração facilitada</div>
             </div>
           </div>
         </motion.div>

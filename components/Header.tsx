@@ -12,7 +12,7 @@ const navigation = [
   { name: 'Brand Health', href: '#brand-health' },
   { name: 'Funcionalidades', href: '#features' },
   { name: 'Preços', href: '#pricing' },
-  { name: 'Prova Social', href: '#social-proof' },
+  //{ name: 'Prova Social', href: '#social-proof' },
   { name: 'Comparativo', href: '#comparison' },
   { name: 'Contato', href: '#contact' },
 ];
@@ -103,7 +103,7 @@ export default function Header() {
                 className="w-full justify-start"
                 onClick={() => { window.location.href = isLoggedIn ? '/dashboardPage.html' : '/login.html'; }}
               >
-                {isLoggedIn ? 'Acessar' : 'Experimente agora'}
+                {isLoggedIn ? 'Acessar' : 'Login'}
               </Button>
               <Dialog>
                 <DialogTrigger asChild>
@@ -152,7 +152,7 @@ export default function Header() {
                   className="w-full justify-start"
                   onClick={() => { window.location.href = isLoggedIn ? '/dashboardPage.html' : '/login.html'; }}
                 >
-                  {isLoggedIn ? 'Acessar' : 'Experimente agora'}
+                  {isLoggedIn ? 'Acessar' : 'Login'}
                 </Button>
                 <Dialog>
                   <DialogTrigger asChild>

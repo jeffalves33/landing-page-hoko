@@ -10,11 +10,11 @@ const footerSections = [
     links: [
       { name: 'Funcionalidades', href: '#features' },
       { name: 'Preços', href: '#pricing' },
-      { name: 'Integrações', href: '#' },
-      { name: 'API', href: '#' },
+      //{ name: 'Integrações', href: '#' },
+      //{ name: 'API', href: '#' },
     ],
   },
-  {
+  /*{
     title: 'Recursos',
     links: [
       { name: 'Blog', href: '#' },
@@ -31,14 +31,14 @@ const footerSections = [
       { name: 'Imprensa', href: '#' },
       { name: 'Parceiros', href: '#' },
     ],
-  },
+  },*/
   {
     title: 'Suporte',
     links: [
       { name: 'Central de Ajuda', href: '#' },
-      { name: 'Contato', href: '#contact' },
-      { name: 'Status', href: '#' },
-      { name: 'Treinamentos', href: '#' },
+      //{ name: 'Contato', href: '#contact' },
+      //{ name: 'Status', href: '#' },
+      //{ name: 'Treinamentos', href: '#' },
     ],
   },
 ];
@@ -76,10 +76,9 @@ export default function Footer() {
               <div className="mb-6">
                 <Logo />
               </div>
-              <p className="text-slate-300 mb-8 leading-relaxed">
-                A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação. 
-                Transformamos dados em decisões inteligentes.
-              </p>
+              {/*<p className="text-slate-300 mb-8 leading-relaxed">
+                Uma ferramenta de inteligência de marca e comunicação que conecta performance, percepção e valor para decisões mais rápidas, embasadas e estratégicas.
+              </p>*/}
               
               {/* Contact info */}
               <div className="space-y-4">
@@ -180,7 +179,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick navigation */}
+        {/* Quick navigation 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +201,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </footer>
   );

@@ -59,11 +59,11 @@ export default function ValueProposition() {
           className="text-center mb-16"
         >
           <h2 className="text-headline mb-6">
-            Muito além de métricas. Nós mostramos o que{' '}
+            Pataforma que {' '}
             <span className="bg-gradient-to-r from-hoko-primary to-hoko-secondary bg-clip-text text-transparent">
-              realmente gera valor
+              revela o valor real da sua marca
             </span>{' '}
-            para sua marca.
+            ao transformar dados em inteligência.
           </h2>
         </motion.div>
 
@@ -80,21 +80,21 @@ export default function ValueProposition() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   transition: { type: "spring", stiffness: 300 }
                 }}
                 className="group"
               >
-               <div className="dark-block p-8 h-full hover:shadow-brand transition-all duration-300 border group-hover:border-hoko-primary/20">
+                <div className="dark-block p-8 h-full hover:shadow-brand transition-all duration-300 border group-hover:border-hoko-primary/20">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl gradient-brand mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-                  
-                 <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-hoko-primary transition-colors duration-300">
+
+                  <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-hoko-primary transition-colors duration-300">
                     📊 {feature.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>

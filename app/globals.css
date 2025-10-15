@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --hoko-primary: 244.5 95% 50%;   /* #1b09f8 */
-  --hoko-secondary: 248.7 95% 60%; /* #5438fa */
-  --hoko-tertiary: 255.3 96% 69.6%;/* #8d67fc */
+  --hoko-primary: 244.5 95% 70%;   /* #1b09f8 */
+  --hoko-secondary: 248.7 95% 80%; /* #5438fa */
+  --hoko-tertiary: 255.3 96% 89.6%;/* #8d67fc */
   --hoko-quaternary: 268 96% 79%;  /* #c696fd */
   --hoko-highlight: 300 100% 88.6%;/* #ffc5ff */
 

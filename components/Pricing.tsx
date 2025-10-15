@@ -70,7 +70,7 @@ const faqItems = [
   },
   {
     question: 'Há período de teste gratuito?',
-    answer: 'Oferecemos 14 dias de teste gratuito para todos os planos. Não é necessário cartão de crédito para começar.',
+    answer: 'Oferecemos 30 dias de teste gratuito para todos os planos. Não é necessário cartão de crédito para começar.',
   },
   {
     question: 'Como funciona o suporte técnico?',
@@ -225,7 +225,7 @@ export default function Pricing() {
             <div className="w-8 h-8 rounded-full gradient-brand flex items-center justify-center mr-3">
               <Check className="h-4 w-4 text-white" />
             </div>
-            <span className="text-sm font-medium text-foreground">Garantia de 30 dias - seu dinheiro de volta se não ficar satisfeito</span>
+            <span className="text-sm font-medium text-foreground">Garantia de 30 dias - primeiro mês para testar</span>
           </div>
         </motion.div>
       </div>

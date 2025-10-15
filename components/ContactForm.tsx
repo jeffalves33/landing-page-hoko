@@ -38,27 +38,26 @@ export default function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Contact form data:', data);
-      
+      const res = await fetch('/api/contact/demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const payload = await res.json();
+      if (!res.ok) throw new Error(payload?.message || 'Erro no envio');
+
       setIsSubmitted(true);
-      toast.success('Mensagem enviada com sucesso! Responderemos em breve.');
+      toast.success('Solicitação enviada com sucesso! Entraremos em contato em breve.');
       reset();
-      
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-      
-    } catch (error) {
-      toast.error('Erro ao enviar mensagem. Tente novamente.');
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (err: any) {
+      toast.error(err?.message || 'Erro ao enviar solicitação. Tente novamente.');
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   const formatPhone = (value: string) => {
     const numbers = value.replace(/\D/g, '');
@@ -188,7 +187,7 @@ export default function ContactForm() {
             <div className="text-sm">
               <p className="font-medium text-foreground mb-1">Resposta rápida garantida</p>
               <p className="text-muted-foreground text-xs">
-                Nossa equipe de especialistas responde em até 2 horas durante o horário comercial. 
+                Nossa equipe de especialistas responde em até 2 horas durante o horário comercial.
                 Para urgências, entre em contato via WhatsApp.
               </p>
             </div>

@@ -106,7 +106,7 @@ export default function FinalCTA() {
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-white mb-2">14 dias</div>
+                <div className="text-3xl font-bold text-white mb-2">30 dias</div>
                 <div className="text-white/80 text-sm">Teste gratuito</div>
               </div>
               <div>

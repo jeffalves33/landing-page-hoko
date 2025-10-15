@@ -14,10 +14,10 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-hoko-primary/5 via-hoko-secondary/5 to-hoko-tertiary/5" />
-        
+
         {/* Animated Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-        
+
         {/* Floating Elements */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-hoko-primary/10 rounded-full blur-3xl"
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <motion.h1 
+            <motion.h1
               className="text-display font-bold mb-6 bg-gradient-to-r from-hoko-primary via-hoko-secondary to-hoko-tertiary bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -63,26 +63,26 @@ export default function Hero() {
               Decisões mais inteligentes, marcas mais fortes.
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="text-xl text-muted-foreground mb-8 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              A primeira plataforma brasileira de inteligência preditiva para gestão de marca e comunicação.
+              Plataforma de inteligência de marca e comunicação, que conecta performance, percepção e valor  para decisões mais rápidas, embasadas e estratégicas.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button size="lg" className="magnetic gradient-brand text-white border-0 group">
+              <Button size="lg" className="magnetic gradient-brand text-white border-0 group" onClick={() => { window.location.href = '/login.html'; }}>
                 Experimente agora
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              
+
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="outline" size="lg" className="magnetic group">
@@ -97,7 +97,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

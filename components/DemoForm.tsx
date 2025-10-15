@@ -50,28 +50,26 @@ export default function DemoForm() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log('Form data:', data);
-      
+      const res = await fetch('/api/contact/demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const payload = await res.json();
+      if (!res.ok) throw new Error(payload?.message || 'Erro no envio');
+
       setIsSubmitted(true);
       toast.success('Solicitação enviada com sucesso! Entraremos em contato em breve.');
       reset();
-      
-      // Reset form state after a delay
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-      
-    } catch (error) {
-      toast.error('Erro ao enviar solicitação. Tente novamente.');
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (err: any) {
+      toast.error(err?.message || 'Erro ao enviar solicitação. Tente novamente.');
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   const formatPhone = (value: string) => {
     const numbers = value.replace(/\D/g, '');
@@ -235,7 +233,7 @@ export default function DemoForm() {
                 <li>• Demonstração ao vivo da plataforma (45 min)</li>
                 <li>• Análise gratuita dos seus dados</li>
                 <li>• Proposta comercial personalizada</li>
-                <li>• 14 dias de teste gratuito</li>
+                <li>• 30 dias de teste gratuito</li>
               </ul>
             </div>
           </div>
