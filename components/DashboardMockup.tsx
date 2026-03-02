@@ -1,7 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChartBar as BarChart3, TrendingUp, Target, Users, Eye, Zap } from 'lucide-react';
+import {
+  ChartBar as BarChart3,
+  TrendingUp,
+  Users,
+  Eye,
+  Sparkles,
+  MousePointerClick,
+} from 'lucide-react';
 
 export default function DashboardMockup() {
   return (
@@ -10,17 +17,17 @@ export default function DashboardMockup() {
       <motion.div
         className="relative dark-block p-6 shadow-2xl gradient-border"
         whileHover={{ y: -5 }}
-        transition={{ type: "spring", stiffness: 300 }}
+        transition={{ type: 'spring', stiffness: 300 }}
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h3 className="text-lg font-semibold text-foreground">Brand Health Dashboard</h3>
-            <p className="text-sm text-muted-foreground">Visão 360° da sua marca</p>
+            <h3 className="text-lg font-semibold text-foreground">Dashboard Multi‑Plataforma</h3>
+            <p className="text-sm text-muted-foreground">Métricas por cliente e período</p>
           </div>
           <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-subtle"></div>
-            <span className="text-xs text-muted-foreground">Ao vivo</span>
+            <div className="w-2 h-2 bg-hoko-tertiary rounded-full animate-pulse-subtle" />
+            <span className="text-xs text-muted-foreground">Atualizado diariamente</span>
           </div>
         </div>
 
@@ -34,29 +41,29 @@ export default function DashboardMockup() {
           >
             <div className="flex items-center space-x-2 mb-2">
               <Eye className="h-4 w-4 text-hoko-primary" />
-              <span className="text-xs font-medium">Awareness</span>
+              <span className="text-xs font-medium">Alcance (Meta)</span>
             </div>
-            <div className="text-2xl font-bold text-hoko-primary">87%</div>
-            <div className="text-xs text-green-600 flex items-center">
+            <div className="text-2xl font-bold text-hoko-primary">128,4k</div>
+            <div className="text-xs text-hoko-quaternary flex items-center">
               <TrendingUp className="h-3 w-3 mr-1" />
-              +12% vs último mês
+              +8% vs período anterior
             </div>
           </motion.div>
 
           <motion.div
-            className="bg-hoko-secondary/10 rounded-xl p-4"
+            className="bg-hoko-tertiary/10 rounded-xl p-4"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7 }}
           >
             <div className="flex items-center space-x-2 mb-2">
-              <Target className="h-4 w-4 text-hoko-secondary" />
-              <span className="text-xs font-medium">Conversão</span>
+              <MousePointerClick className="h-4 w-4 text-hoko-tertiary" />
+              <span className="text-xs font-medium">Sessões (GA4)</span>
             </div>
-            <div className="text-2xl font-bold text-hoko-secondary">3.4%</div>
-            <div className="text-xs text-green-600 flex items-center">
+            <div className="text-2xl font-bold text-hoko-tertiary">42,1k</div>
+            <div className="text-xs text-hoko-quaternary flex items-center">
               <TrendingUp className="h-3 w-3 mr-1" />
-              +0.8% vs último mês
+              +5% vs período anterior
             </div>
           </motion.div>
         </div>
@@ -69,46 +76,54 @@ export default function DashboardMockup() {
           transition={{ delay: 0.9 }}
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-medium text-foreground">Previsão de Performance</span>
+            <span className="text-sm font-medium text-foreground">Impressões por mês</span>
             <BarChart3 className="h-4 w-4 text-muted-foreground" />
           </div>
-          
+
           {/* Simulated Chart */}
           <div className="flex items-end space-x-1 h-20">
-            {[40, 65, 45, 80, 70, 95, 85, 90, 100].map((height, index) => (
+            {[52, 60, 58, 70, 66, 78, 72, 85, 68, 72, 70, 88, 80, 83, 78, 85, 89, 86, 80, 75, 76, 85, 90, 66, 88, 65, 97, 99].map((height, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-t from-hoko-primary to-hoko-secondary rounded-t"
-                style={{ height: `${height}%`, width: '12px' }}
+                className="bg-gradient-to-t from-hoko-secondary to-hoko-primary rounded-t"
+                style={{ height: `${height}%`, width: '14px' }}
                 initial={{ height: 0 }}
                 animate={{ height: `${height}%` }}
-                transition={{ delay: 1 + index * 0.1 }}
+                transition={{ delay: 2 + index * 0.08 }}
               />
             ))}
           </div>
-          
+
           <div className="flex justify-between text-xs text-muted-foreground mt-2">
             <span>Jan</span>
+            <span>Fev</span>
             <span>Mar</span>
+            <span>Abr</span>
             <span>Mai</span>
+            <span>Jun</span>
             <span>Jul</span>
+            <span>Ago</span>
             <span>Set</span>
+            <span>Out</span>
+            <span>Nov</span>
+            <span>Dez</span>
           </div>
         </motion.div>
 
         {/* Insights */}
         <motion.div
-          className="bg-amber-900/20 border border-amber-500/30 rounded-xl p-3"
+          className="bg-hoko-secondary/15 border border-hoko-secondary/30 rounded-xl p-3"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.2 }}
         >
           <div className="flex items-center space-x-2">
-            <Zap className="h-4 w-4 text-amber-400" />
-            <span className="text-xs font-medium text-amber-300">Insight Preditivo</span>
+            <Sparkles className="h-4 w-4 text-hoko-tertiary" />
+            <span className="text-xs font-medium text-foreground">Resumo da IA</span>
           </div>
-          <p className="text-xs text-amber-200 mt-1">
-            Baseado nos dados atuais, projeta-se um aumento de 23% no reconhecimento da marca nos próximos 3 meses.
+          <p className="text-xs text-muted-foreground mt-1">
+            No período selecionado, o Instagram concentrou a maior parte do alcance. Sugestão: priorize Reels e
+            replique os formatos que geraram mais engajamento.
           </p>
         </motion.div>
       </motion.div>
@@ -117,7 +132,7 @@ export default function DashboardMockup() {
       <motion.div
         className="absolute -top-4 -right-4 dark-block-subtle rounded-full p-3 shadow-lg"
         animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         <Users className="h-5 w-5 text-hoko-primary" />
       </motion.div>
@@ -125,9 +140,9 @@ export default function DashboardMockup() {
       <motion.div
         className="absolute -bottom-4 -left-4 dark-block-subtle rounded-full p-3 shadow-lg"
         animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <TrendingUp className="h-5 w-5 text-hoko-secondary" />
+        <TrendingUp className="h-5 w-5 text-hoko-tertiary" />
       </motion.div>
     </div>
   );

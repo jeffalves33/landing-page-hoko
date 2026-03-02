@@ -92,13 +92,13 @@ export default function Footer() {
                   <div className="w-8 h-8 bg-hoko-primary/30 rounded-lg flex items-center justify-center">
                     <Phone className="h-4 w-4 text-hoko-primary" />
                   </div>
-                  <span className="text-slate-300">+55 11 9999-9999</span>
+                  <span className="text-slate-300">+55 19 99714-8221</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-hoko-primary/30 rounded-lg flex items-center justify-center">
                     <MapPin className="h-4 w-4 text-hoko-primary" />
                   </div>
-                  <span className="text-slate-300">São Paulo, SP - Brasil</span>
+                  <span className="text-slate-300">Campinas, SP - Brasil</span>
                 </div>
               </div>
             </motion.div>

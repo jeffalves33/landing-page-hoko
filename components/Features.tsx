@@ -16,21 +16,21 @@ const features = [
     icon: Crosshair,
     title: 'Centralização Inteligente',
     description: 'Reduz tempo operacional e aumenta eficiência.',
-    example: 'Reúne marketing, reputação e vendas em um só ambiente',
+    example: 'Centraliza métricas de diferentes plataformas em um só lugar',
     color: 'hoko-secondary',
   },
   {
     icon: FileText,
     title: 'Relatórios',
     description: 'Ganhe eficiência em períodos de entregas de resultados para clientes.',
-    example: 'Comunicação periódica efetica sobre resultados',
+    example: 'Relatórios automatizados para reduzir tempo de montagem e revisão',
     color: 'hoko-tertiary',
   },
   {
     icon: ChartSpline,
     title: 'Análises',
     description: 'Entendimento real do presente e da performance.',
-    example: 'O que aconteceu, antecipar oportunidades e indicação do que fazer',
+    example: 'O que aconteceu no período + recomendações práticas para o próximo passo',
     color: 'hoko-primary',
   },
 ];
@@ -53,7 +53,7 @@ export default function Features() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nossa plataforma combina inteligência artificial avançada com expertise em branding para entregar insights únicos.
+            Conecte dados, acompanhe métricas e gere relatórios e análises com IA — tudo organizado por cliente.
           </p>
         </motion.div>
 
@@ -112,7 +112,7 @@ export default function Features() {
                         <span className="text-muted-foreground">Status:</span>
                         <div className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-subtle"></div>
-                          <span className="text-green-600 font-medium">Disponível</span>
+                          <span className="text-hoko-quaternary font-medium">Disponível</span>
                         </div>
                       </div>
                     </div>
@@ -133,16 +133,16 @@ export default function Features() {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-hoko-primary mb-2">5+</div>
-              <div className="text-sm text-muted-foreground">Plataformas integradas</div>
+              <div className="text-3xl font-bold text-hoko-primary mb-2">Integrações</div>
+              <div className="text-sm text-muted-foreground">Meta, GA4, LinkedIn e YouTube</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-hoko-secondary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Monitoramento</div>
+              <div className="text-3xl font-bold text-hoko-secondary mb-2">Por cliente</div>
+              <div className="text-sm text-muted-foreground">Organização e histórico</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-hoko-tertiary mb-2">API</div>
-              <div className="text-sm text-muted-foreground">Integração facilitada</div>
+              <div className="text-3xl font-bold text-hoko-tertiary mb-2">IA</div>
+              <div className="text-sm text-muted-foreground">Relatórios e recomendações</div>
             </div>
           </div>
         </motion.div>

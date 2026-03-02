@@ -76,7 +76,7 @@ export default function ContactForm() {
         className="text-center py-12"
       >
         <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-          <CheckCircle className="h-10 w-10 text-green-600" />
+          <CheckCircle className="h-10 w-10 text-hoko-quaternary" />
         </div>
         <h3 className="text-2xl font-semibold mb-3">Mensagem enviada!</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -144,7 +144,7 @@ export default function ContactForm() {
                 }
               })}
               className={`focus-ring ${errors.phone ? 'border-red-500' : ''}`}
-              placeholder="(11) 99999-9999"
+              placeholder="(19) 99714-8221"
             />
             {errors.phone && (
               <p className="text-sm text-red-600 mt-1">{errors.phone.message}</p>

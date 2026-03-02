@@ -9,7 +9,7 @@ import DemoForm from './DemoForm';
 import Logo from './Logo';
 
 const navigation = [
-  { name: 'Brand Health', href: '#brand-health' },
+  { name: 'Dashboard', href: '#dashboard' },
   { name: 'Funcionalidades', href: '#features' },
   { name: 'Preços', href: '#pricing' },
   //{ name: 'Prova Social', href: '#social-proof' },

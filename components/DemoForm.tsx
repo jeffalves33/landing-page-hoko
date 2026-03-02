@@ -88,7 +88,7 @@ export default function DemoForm() {
         className="text-center py-8"
       >
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle className="h-8 w-8 text-green-600" />
+          <CheckCircle className="h-8 w-8 text-hoko-quaternary" />
         </div>
         <h3 className="text-xl font-semibold mb-2">Solicitação enviada!</h3>
         <p className="text-muted-foreground mb-4">
@@ -226,7 +226,7 @@ export default function DemoForm() {
 
         {/*<div className="bg-muted/50 rounded-lg p-4">
           <div className="flex items-start space-x-3">
-            <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="h-5 w-5 text-hoko-quaternary mt-0.5 flex-shrink-0" />
             <div className="text-sm">
               <p className="font-medium text-foreground">O que você recebe:</p>
               <ul className="mt-1 space-y-1 text-muted-foreground">

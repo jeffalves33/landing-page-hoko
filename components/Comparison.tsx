@@ -5,37 +5,37 @@ import { Check, X } from 'lucide-react';
 
 const comparisonData = [
   {
-    feature: 'Análise de marca integrada',
+    feature: 'Dashboard organizado por cliente e período',
     hoko: true,
     others: false,
   },
   {
-    feature: 'Predições com IA',
+    feature: 'Integrações em um só lugar (Meta, GA4, LinkedIn, YouTube)',
     hoko: true,
     others: false,
   },
   {
-    feature: 'Métricas de comunicação',
+    feature: 'Métricas e gráficos prontos para apresentação',
     hoko: true,
     others: true,
   },
   {
-    feature: 'Análises prescritivas',
-    hoko: true,
-    others: false,
-  },
-  {
-    feature: 'ROI de campanhas',
+    feature: 'Relatórios automatizados para entregas',
     hoko: true,
     others: true,
   },
   {
-    feature: 'Brand Health Score',
+    feature: 'Análises com IA (resumo + recomendações)',
     hoko: true,
     others: false,
   },
   {
-    feature: 'Relatórios automatizados',
+    feature: 'Histórico e contexto por cliente (documentos + informações)',
+    hoko: true,
+    others: false,
+  },
+  {
+    feature: 'Exportação/compartilhamento de resultados',
     hoko: true,
     others: true,
   },
@@ -64,7 +64,7 @@ export default function Comparison() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Enquanto outras ferramentas focam apenas em tráfego e leads, nós combinamos marca, comunicação e predição em uma única plataforma.
+            Enquanto outras ferramentas ficam fragmentadas por canal, a ho.ko AI.nalytics centraliza dados por cliente e gera relatórios e análises com IA.
           </p>
         </motion.div>
 
@@ -151,9 +151,8 @@ export default function Comparison() {
               A diferença está na abordagem completa
             </h3>
             <p className="text-muted-foreground">
-              Enquanto ferramentas tradicionais analisam apenas performance de tráfego e leads, 
-              a ho.ko AI.nalytics conecta todos os aspectos da sua marca — desde awareness até conversão — 
-              com predições baseadas em IA para decisões mais inteligentes.
+              O diferencial está na organização e na execução: dashboards prontos, histórico por cliente e análises com IA
+              para acelerar decisões e entregas.
             </p>
           </div>
         </motion.div>

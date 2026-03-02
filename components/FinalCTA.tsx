@@ -10,7 +10,7 @@ export default function FinalCTA() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 gradient-brand opacity-90" />
+      <div className="absolute inset-0 gradient-brand-finalCTA opacity-90" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.1)_100%)]" />
       
       {/* Animated background elements */}
@@ -61,7 +61,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-white/80 mb-12 max-w-2xl mx-auto"
           >
-            Pare de apostar no escuro. Use dados, IA e predições para construir uma marca mais forte e resultados consistentes.
+            Pare de apostar no escuro. Use dados e IA para construir decisões mais rápidas, embasadas e consistentes.
           </motion.p>
 
           <motion.div
@@ -107,15 +107,15 @@ export default function FinalCTA() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-white mb-2">30 dias</div>
-                <div className="text-white/80 text-sm">Teste gratuito</div>
+                <div className="text-white/80 text-sm">Para testar na prática</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-white/80 text-sm">Uptime garantido</div>
+                <div className="text-3xl font-bold text-white mb-2">Onboarding</div>
+                <div className="text-white/80 text-sm">Configuração guiada</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/80 text-sm">Suporte especializado</div>
+                <div className="text-3xl font-bold text-white mb-2">Suporte</div>
+                <div className="text-white/80 text-sm">Equipe no Brasil</div>
               </div>
             </div>
           </motion.div>

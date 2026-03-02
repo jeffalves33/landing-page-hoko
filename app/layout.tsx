@@ -1,17 +1,18 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const inter = Inter({ 
+const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
-  preload: true
+  preload: true,
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
   title: 'ho.ko AI.nalytics',
   description: 'Plataforma de inteligência de marca e comunicação, que conecta performance, percepção e valor  para decisões mais rápidas, embasadas e estratégicas.',
-  keywords: 'inteligência preditiva, gestão de marca, analytics, comunicação, marketing, brand health',
+  keywords: 'analytics, relatórios, dashboard, IA, comunicação, marketing, meta, google analytics, linkedin, youtube',
   authors: [{ name: 'ho.ko AI.nalytics' }],
   creator: 'ho.ko AI.nalytics',
   openGraph: {
@@ -72,7 +73,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${montserrat.className} antialiased`}>
         {children}
       </body>
     </html>

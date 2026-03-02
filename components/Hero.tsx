@@ -9,7 +9,7 @@ import DashboardMockup from './DashboardMockup';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section id="dashboard" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Gradient Background */}
@@ -104,16 +104,16 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-hoko-primary">95%</div>
-                <div className="text-sm text-muted-foreground">Precisão preditiva</div>
+                <div className="text-2xl font-bold text-hoko-primary">4+</div>
+                <div className="text-sm text-muted-foreground">Integrações (Meta, GA4, LinkedIn, YouTube)</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-hoko-secondary">3x</div>
-                <div className="text-sm text-muted-foreground">ROI médio</div>
+                <div className="text-2xl font-bold text-hoko-tertiary">IA</div>
+                <div className="text-sm text-muted-foreground">Análises e recomendações</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-hoko-tertiary">24h</div>
-                <div className="text-sm text-muted-foreground">Setup inicial</div>
+                <div className="text-2xl font-bold text-hoko-tertiary">Por cliente</div>
+                <div className="text-sm text-muted-foreground">Dashboard com filtros de período</div>
               </div>
             </motion.div>
           </motion.div>
