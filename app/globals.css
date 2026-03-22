@@ -342,7 +342,7 @@
   .text-display {
     @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
     background: linear-gradient(135deg,
-        hsl(var(--hoko-primary)),
+        hsl(var(--hoko-secondary)),
         hsl(var(--hoko-secondary)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

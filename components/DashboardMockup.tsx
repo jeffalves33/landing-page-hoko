@@ -44,10 +44,10 @@ export default function DashboardMockup() {
               <span className="text-xs font-medium">Alcance (Meta)</span>
             </div>
             <div className="text-2xl font-bold text-hoko-primary">128,4k</div>
-            <div className="text-xs text-hoko-quaternary flex items-center">
+            {/*<div className="text-xs text-hoko-quaternary flex items-center">
               <TrendingUp className="h-3 w-3 mr-1" />
               +8% vs período anterior
-            </div>
+            </div>8*/}
           </motion.div>
 
           <motion.div
@@ -61,10 +61,10 @@ export default function DashboardMockup() {
               <span className="text-xs font-medium">Sessões (GA4)</span>
             </div>
             <div className="text-2xl font-bold text-hoko-tertiary">42,1k</div>
-            <div className="text-xs text-hoko-quaternary flex items-center">
+            {/*<div className="text-xs text-hoko-quaternary flex items-center">
               <TrendingUp className="h-3 w-3 mr-1" />
               +5% vs período anterior
-            </div>
+            </div>*/}
           </motion.div>
         </div>
 
