@@ -77,20 +77,20 @@ export default function Comparison() {
         >
           <div className="dark-block overflow-hidden">
             {/* Header */}
-            <div className="grid grid-cols-3 bg-muted/20">
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground">Funcionalidade</h3>
+            <div className="grid grid-cols-[minmax(0,1fr)_72px_72px] sm:grid-cols-[minmax(0,1fr)_180px_180px] bg-muted/20">
+              <div className="p-3 sm:p-6">
+                <h3 className="text-sm sm:text-lg font-semibold text-foreground">Funcionalidade</h3>
               </div>
-              <div className="p-6 text-center border-x">
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-6 h-6 rounded gradient-brand flex items-center justify-center">
+              <div className="p-3 sm:p-6 text-center border-x">
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded gradient-brand flex items-center justify-center shrink-0">
                     <Check className="h-4 w-4 text-white" />
                   </div>
-                  <span className="font-semibold text-hoko-primary">ho.ko AI.nalytics</span>
+                  <span className="font-semibold text-hoko-primary text-[11px] leading-tight sm:text-base">ho.ko AI.nalytics</span>
                 </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-muted-foreground">
+              <div className="p-3 sm:p-6 text-center">
+                <h3 className="text-[11px] leading-tight sm:text-lg font-semibold text-muted-foreground">
                   Ferramentas tradicionais
                 </h3>
               </div>
@@ -105,12 +105,12 @@ export default function Comparison() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="grid grid-cols-3 hover:bg-muted/10 transition-colors duration-300"
+                  className="grid grid-cols-[minmax(0,1fr)_72px_72px] sm:grid-cols-[minmax(0,1fr)_180px_180px] hover:bg-muted/10 transition-colors duration-300"
                 >
-                  <div className="p-6">
-                    <span className="text-sm font-medium text-foreground">{item.feature}</span>
+                  <div className="p-3 sm:p-6 min-w-0">
+                    <span className="text-sm sm:text-base font-medium text-foreground break-words">{item.feature}</span>
                   </div>
-                  <div className="p-6 text-center border-x">
+                  <div className="p-3 sm:p-6 text-center border-x">
                     {item.hoko ? (
                       <div className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100">
                         <Check className="h-4 w-4 text-green-600" />
@@ -121,7 +121,7 @@ export default function Comparison() {
                       </div>
                     )}
                   </div>
-                  <div className="p-6 text-center">
+                  <div className="p-3 sm:p-6 text-center flex items-center justify-center">
                     {item.others ? (
                       <div className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100">
                         <Check className="h-4 w-4 text-green-600" />
