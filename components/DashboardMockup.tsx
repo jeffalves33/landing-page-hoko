@@ -12,27 +12,27 @@ import {
 
 export default function DashboardMockup() {
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-full">
       {/* Main Dashboard Container */}
       <motion.div
-        className="relative dark-block p-6 shadow-2xl gradient-border"
+        className="relative dark-block p-4 sm:p-6 shadow-2xl gradient-border w-full max-w-full overflow-hidden"
         whileHover={{ y: -5 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
           <div>
             <h3 className="text-lg font-semibold text-foreground">Dashboard Multi‑Plataforma</h3>
             <p className="text-sm text-muted-foreground">Métricas por cliente e período</p>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2 self-start sm:self-auto">
             <div className="w-2 h-2 bg-hoko-tertiary rounded-full animate-pulse-subtle" />
             <span className="text-xs text-muted-foreground">Atualizado diariamente</span>
           </div>
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <motion.div
             className="bg-hoko-primary/10 rounded-xl p-4"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -81,12 +81,12 @@ export default function DashboardMockup() {
           </div>
 
           {/* Simulated Chart */}
-          <div className="flex items-end space-x-1 h-20">
+          <div className="flex items-end gap-1 h-20 overflow-hidden">
             {[52, 60, 58, 70, 66, 78, 72, 85, 68, 72, 70, 88, 80, 83, 78, 85, 89, 86, 80, 75, 76, 85, 90, 66, 88, 65, 97, 99].map((height, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-t from-hoko-secondary to-hoko-primary rounded-t"
-                style={{ height: `${height}%`, width: '14px' }}
+                className="bg-gradient-to-t from-hoko-secondary to-hoko-primary rounded-t flex-1 min-w-0"
+                style={{ height: `${height}%` }}
                 initial={{ height: 0 }}
                 animate={{ height: `${height}%` }}
                 transition={{ delay: 2 + index * 0.08 }}
@@ -94,7 +94,7 @@ export default function DashboardMockup() {
             ))}
           </div>
 
-          <div className="flex justify-between text-xs text-muted-foreground mt-2">
+          <div className="grid grid-cols-6 sm:grid-cols-12 gap-y-1 text-[10px] sm:text-xs text-muted-foreground mt-2">
             <span>Jan</span>
             <span>Fev</span>
             <span>Mar</span>
@@ -117,7 +117,7 @@ export default function DashboardMockup() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.2 }}
         >
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2 self-start sm:self-auto">
             <Sparkles className="h-4 w-4 text-hoko-tertiary" />
             <span className="text-xs font-medium text-foreground">Resumo da IA</span>
           </div>
@@ -130,7 +130,7 @@ export default function DashboardMockup() {
 
       {/* Floating Elements */}
       <motion.div
-        className="absolute -top-4 -right-4 dark-block-subtle rounded-full p-3 shadow-lg"
+        className="absolute top-2 right-2 sm:-top-4 sm:-right-4 dark-block-subtle rounded-full p-2 sm:p-3 shadow-lg"
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
@@ -138,7 +138,7 @@ export default function DashboardMockup() {
       </motion.div>
 
       <motion.div
-        className="absolute -bottom-4 -left-4 dark-block-subtle rounded-full p-3 shadow-lg"
+        className="absolute bottom-2 left-2 sm:-bottom-4 sm:-left-4 dark-block-subtle rounded-full p-2 sm:p-3 shadow-lg"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >

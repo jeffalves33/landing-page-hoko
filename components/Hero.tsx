@@ -9,7 +9,7 @@ import DashboardMockup from './DashboardMockup';
 
 export default function Hero() {
   return (
-    <section id="dashboard" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section id="dashboard" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Gradient Background */}
@@ -45,17 +45,17 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container-custom relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container-custom relative w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left w-full min-w-0"
           >
             <motion.h1
-              className="text-display font-bold mb-6 bg-gradient-to-r from-hoko-primary via-hoko-secondary to-hoko-tertiary bg-clip-text text-transparent"
+              className="text-[2.2rem] leading-[1.05] sm:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6 bg-gradient-to-r from-hoko-primary via-hoko-secondary to-hoko-tertiary bg-clip-text text-transparent break-words text-balance mx-auto lg:mx-0 max-w-[12ch] sm:max-w-none"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -64,7 +64,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-xl text-muted-foreground mb-8 max-w-2xl"
+              className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -73,19 +73,19 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start w-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button size="lg" className="magnetic gradient-brand text-white border-0 group" onClick={() => { window.location.href = '/login.html'; }}>
+              <Button size="lg" className="magnetic gradient-brand text-white border-0 group w-full sm:w-auto" onClick={() => { window.location.href = '/login.html'; }}>
                 Experimente agora
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
 
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" size="lg" className="magnetic group">
+                  <Button variant="outline" size="lg" className="magnetic group w-full sm:w-auto">
                     <Play className="mr-2 h-4 w-4" />
                     Solicite uma demonstração
                   </Button>
@@ -98,20 +98,20 @@ export default function Hero() {
 
             {/* Stats */}
             <motion.div
-              className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-12 pt-8 border-t"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left w-full min-w-0">
                 <div className="text-2xl font-bold text-hoko-primary">4+</div>
                 <div className="text-sm text-muted-foreground">Integrações (Meta, GA4, LinkedIn, YouTube)</div>
               </div>
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left w-full min-w-0">
                 <div className="text-2xl font-bold text-hoko-tertiary">IA</div>
                 <div className="text-sm text-muted-foreground">Análises e recomendações</div>
               </div>
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left w-full min-w-0">
                 <div className="text-2xl font-bold text-hoko-tertiary">Por cliente</div>
                 <div className="text-sm text-muted-foreground">Dashboard com filtros de período</div>
               </div>
@@ -123,7 +123,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative"
+            className="relative w-full min-w-0"
           >
             <DashboardMockup />
           </motion.div>
